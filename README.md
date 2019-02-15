@@ -14,9 +14,12 @@ graphql
 + socket.io
 + redis
 + mongodb
-
++ docker
 
 ## Testing
 mocha jest enzyme
+
+## CI
+travis (https://travis-ci.com/nodexchange/next-blog)
 
 # personal project for the upskilling
