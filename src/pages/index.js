@@ -1,4 +1,4 @@
-import Layout from '../components/Layout.js'
+import Layout from '../components/Layout'
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
 
@@ -11,6 +11,7 @@ const Index = (props) => (
           <Link as={`/p/${show.id}`} href={`/post?id=${show.id}`}>
             <a>{show.name}</a>
           </Link>
+          <HelloWorld />
         </li>
       ))}
     </ul>
