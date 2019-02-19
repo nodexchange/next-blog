@@ -1,2 +1,7 @@
-import React from 'react'
-export default () => <div>Hello World</div>
+const HelloWorld = () => (
+  <div>
+     <p>Hello World!</p>
+  </div>
+)
+
+export default HelloWorld
