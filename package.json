@@ -12,18 +12,33 @@
   },
   "devDependencies": {
     "@babel/core": "^7.3.3",
-    "@storybook/react": "^4.1.11",
     "@storybook/addon-actions": "^4.1.7",
     "@storybook/addon-links": "^4.1.7",
     "@storybook/addons": "^4.1.7",
+    "@storybook/react": "^4.1.11",
+    "babel-jest": "^24.1.0",
     "babel-loader": "^8.0.5",
-    "nodemon": "^1.18.10"
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.9.1",
+    "enzyme-to-json": "^3.3.5",
+    "jest": "^24.1.0",
+    "nodemon": "^1.18.10",
+    "react-addons-test-utils": "^15.6.2",
+    "react-test-renderer": "^16.8.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "test:watchAll": "jest --watchAll",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
     "dev": "nodemon -w  server/server.js server/server.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   },
   "repository": {
     "type": "git",

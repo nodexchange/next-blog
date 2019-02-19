@@ -4,6 +4,6 @@
  *  ie: import { CounterButton, InfoBar } from 'components';
  *
  */
-
-export Header from './Header/Header'
-export ArrowNav from './Layout/Layout'
+export { default as Header } from './Header/Header'
+export { default as Layout } from './Layout/Layout'
+export { default as HelloWorld } from './HelloWorld/HelloWorld'
