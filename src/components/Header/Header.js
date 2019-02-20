@@ -25,6 +25,9 @@ const Header = () => (
     <li>
       <a href='/favicon.ico'>/favicon.ico</a>
     </li>
+    <li>
+      <a href='/apidemo'>/apidemo</a>
+    </li>
   </div>
 )
 
