@@ -16,6 +16,15 @@ const Header = () => (
     <Link href="/next">
       <a style={linkStyle}>Next</a>
     </Link>
+    <li>
+      <a href='/robots.txt'>/robots.txt</a>
+    </li>
+    <li>
+      <a href='/sitemap.xml'>/sitemap.xml</a>
+    </li>
+    <li>
+      <a href='/favicon.ico'>/favicon.ico</a>
+    </li>
   </div>
 )
 
