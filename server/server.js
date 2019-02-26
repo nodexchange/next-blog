@@ -1,6 +1,7 @@
 const express = require('express')
 const next = require('next')
 const api = require('./modules/get-item')
+const GraphQL = require('./modules/graphql')
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev:dev, dir: './src' })
@@ -8,6 +9,8 @@ const handle = app.getRequestHandler()
 
 app.prepare().then(() => {
   const server = express()
+  const graphql = new GraphQL(server)
+
 
   // server.use(express.static('static'))
   server.use('/static', express.static('static'));

@@ -5,6 +5,7 @@ Basics:
 Frontend:
   ☐ read more about branches management (features, bugfixes) @low
   ✔ react @critical @done (2/21/2019, 9:40:50 PM)
+  ☐ react-blog @critical
   ☐ react-redux (next.js) @critical (https://github.com/zeit/next.js/tree/canary/examples/with-apollo-and-redux)
   ☐ sass in next @high
   ☐ integrate apollo with front end @high
@@ -34,6 +35,7 @@ Integrations / CI:
   ☐ Travis (https://travis-ci.com/nodexchange/next-blog) @critical
   ☐ Test coverage @critical
   ☐ Wercker @critical
+  ☐ GitLab @critical
 
 Other:
     ☐ Storybook @critical

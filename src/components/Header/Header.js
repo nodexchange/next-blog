@@ -16,6 +16,9 @@ const Header = () => (
     <Link href="/next">
       <a style={linkStyle}>Next</a>
     </Link>
+    <Link href="/graphqldemo">
+      <a style={linkStyle}>Graphql</a>
+    </Link>
     <li>
       <a href='/static/robots.txt'>/robots.txt</a>
     </li>
