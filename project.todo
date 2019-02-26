@@ -8,7 +8,7 @@ Frontend:
   ☐ react-blog @critical
   ☐ react-redux (next.js) @critical (https://github.com/zeit/next.js/tree/canary/examples/with-apollo-and-redux)
   ☐ sass in next @high
-  ☐ integrate apollo with front end @high
+  ✔ integrate apollo with front end @high @done (2/26/2019, 6:00:04 PM)
   ✔ nextjs @critical @done (2/21/2019, 9:40:58 PM)
   ✔ getInitialProps and async data fetch in nextjs @high @done (2/21/2019, 9:41:00 PM)
   ✔ containers / components logic split.  @low @done (2/21/2019, 9:41:01 PM)
@@ -22,11 +22,11 @@ Backend:
   ☐ custom ssr with nextjs @low
   ☐ static root files (with express) @low
   ☐ mongodb @high
-  ☐ apollo @critical (https://github.com/zeit/next.js/tree/canary/examples/with-apollo-and-redux)
-  ☐ graphql @critical (https://github.com/zeit/next.js/tree/canary/examples/with-apollo-and-redux)
-  ☐ docker @high
+  ✔ apollo @critical (https://github.com/zeit/next.js/tree/canary/examples/with-apollo-and-redux) @done (2/26/2019, 6:00:07 PM)
+  ✔ graphql @critical (https://github.com/zeit/next.js/tree/canary/examples/with-apollo-and-redux) @done (2/26/2019, 6:00:08 PM)
+  ✔ docker @high @done (2/26/2019, 6:00:12 PM)
   ☐ docker-compose tests @high
-  ☐ caching graphql @high
+  ✔ caching graphql @high @done (2/26/2019, 6:00:14 PM)
   ☐ socket.io @critical
 
 Integrations / CI:

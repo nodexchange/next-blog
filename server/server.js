@@ -35,6 +35,11 @@ app.prepare().then(() => {
     res.json(itemData)
   })
 
+  server.get('/_data/test', (req, res) => {
+    const showsData = api.getShows();
+    res.json(showsData)
+  })
+
   // Fall-back on other next.js assets.
   server.get('*', (req, res) => {
     return handle(req, res)
