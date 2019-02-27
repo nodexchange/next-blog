@@ -18,6 +18,7 @@ const SHOWS_QUERY = gql
   }
 `
 
+
 const MainPage = (props) => {
   return (
     <div>

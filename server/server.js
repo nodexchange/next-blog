@@ -31,13 +31,18 @@ app.prepare().then(() => {
 
   // When rendering client-side, we will request the same data from this route
   server.get('/_data/item', (req, res) => {
-    const itemData = api.getItem()
-    res.json(itemData)
+    const data = api.getItem()
+    res.json(data)
   })
 
-  server.get('/_data/test', (req, res) => {
-    const showsData = api.getShows();
-    res.json(showsData)
+  server.get('/_data/shows', (req, res) => {
+    const data = api.getShows();
+    res.json(data)
+  })
+
+  server.get('/_data/launches', (req, res) => {
+    const data = api.getLaunches();
+    res.json(data)
   })
 
   // Fall-back on other next.js assets.

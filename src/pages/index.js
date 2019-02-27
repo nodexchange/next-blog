@@ -8,15 +8,15 @@ const Index = (props) => (
     </Layout>
 )
 
-Index.getInitialProps = async function() {
-  const res = await fetch('http://localhost:3000/_data/test')
-  const data = await res.json()
+// Index.getInitialProps = async function() {
+//   const res = await fetch('http://localhost:3000/_data/shows')
+//   const data = await res.json()
 
-  console.log(`Show data fetched. Count: ${data.length}`)
+//   console.log(`Show data fetched. Count: ${data.length}`)
 
-  return {
-    shows: data
-  }
-}
+//   return {
+//     shows: data
+//   }
+// }
 
 export default Index

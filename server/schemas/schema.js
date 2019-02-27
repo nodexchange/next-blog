@@ -22,6 +22,25 @@ const LaunchType = new GraphQLObjectType({
   })
 });
 
+const ShowInfo = new GraphQLObjectType({
+  name: 'Show',
+  fields: () => ({
+    score: { type: GraphQLString },
+    show: { type: ShowDetails }
+  })
+});
+
+// Rocket Type
+const ShowDetails = new GraphQLObjectType({
+  name: 'ShowDetail',
+  fields: () => ({
+    id: { type: GraphQLString },
+    name: { type: GraphQLString },
+    language: { type: GraphQLString },
+    summary: { type: GraphQLString }
+  })
+});
+
 // Rocket Type
 const RocketType = new GraphQLObjectType({
   name: 'Rocket',
@@ -36,11 +55,19 @@ const RocketType = new GraphQLObjectType({
 const RootQuery = new GraphQLObjectType({
   name: 'RootQueryType',
   fields: {
+    shows: {
+      type: new GraphQLList(ShowInfo),
+      resolve(parent, args) {
+        return axios
+          .get('http://localhost:3000/_data/shows')
+          .then(res => res.data);
+      }
+    },
     launches: {
       type: new GraphQLList(LaunchType),
       resolve(parent, args) {
         return axios
-          .get('https://api.spacexdata.com/v3/launches')
+          .get('http://localhost:3000/_data/launches')
           .then(res => res.data);
       }
     },
