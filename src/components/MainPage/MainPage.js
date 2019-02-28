@@ -2,6 +2,8 @@ import React, { Component, Fragment } from 'react'
 import Link from 'next/link'
 import { HelloWorld, Shows } from '../../components'
 
+import style from './MainPage.scss'
+
 import gql from "graphql-tag";
 import { Query } from "react-apollo";
 
@@ -21,7 +23,7 @@ const SHOWS_QUERY = gql
 const MainPage = (props) => {
   return (
     <div>
-      <h1>Batman TV Shows</h1>
+      <h1 id={style.main}>Batman TV Shows</h1>
       <div id="main">
         {props.title}
       </div>
