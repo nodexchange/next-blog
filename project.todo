@@ -1,29 +1,52 @@
-Projects:
-  ☐ branch - feature
-  ☐ dev branch
-  ☐ bugfixes
+Basics:
+  ✔ branch - feature @done (2/21/2019, 8:42:17 AM)
+  ✔ dev branch @done (2/21/2019, 8:42:19 AM)
+  ✔ bugfixes @done (2/21/2019, 8:42:20 AM)
+Frontend:
+  ☐ read more about branches management (features, bugfixes) @low
+  ✔ react @critical @done (2/21/2019, 9:40:50 PM)
+  ☐ react-blog @critical
+  ☐ react-redux (next.js) @critical (https://github.com/zeit/next.js/tree/canary/examples/with-apollo-and-redux)
+  ☐ sass in next @high
+  ✔ integrate apollo with front end @high @done (2/26/2019, 6:00:04 PM)
+  ✔ nextjs @critical @done (2/21/2019, 9:40:58 PM)
+  ✔ getInitialProps and async data fetch in nextjs @high @done (2/21/2019, 9:41:00 PM)
+  ✔ containers / components logic split.  @low @done (2/21/2019, 9:41:01 PM)
+  ✔ containers / components export indexing.  @low @done (2/21/2019, 9:41:02 PM)ß
+  ☐ nextjs json config imports
+  ☐ nextjs translations / i[]
+  ☐ nextjs SEO best practises
+  ☐ nextjs image file imports
+  ☐ experiment with the apollo client data request from get InitialProps / within pages only
+  
+Backend:
+  ☐ custom ssr with nextjs @low
+  ☐ static root files (with express) @low
+  ☐ mongodb @high
+  ✔ apollo @critical (https://github.com/zeit/next.js/tree/canary/examples/with-apollo-and-redux) @done (2/26/2019, 6:00:07 PM)
+  ✔ graphql @critical (https://github.com/zeit/next.js/tree/canary/examples/with-apollo-and-redux) @done (2/26/2019, 6:00:08 PM)
+  ✔ docker @high @done (2/26/2019, 6:00:12 PM)
+  ☐ docker-compose tests @high
+  ✔ caching graphql @high @done (2/26/2019, 6:00:14 PM)
+  ☐ socket.io @critical
 
-  Folding and Indentation:
-      ☐ Demo folidng
-      
-Tasks:
-  New Task:
-      ☐ Press Cmd+Enter (Ctrl+Enter on Windows and Linux) to add a new task
-      ☐ You can also use the Command pallette to create a new task by typing To Do:New Task
-      ☐ If you are on a new line, it will create a new task on the current line
-      ☐ If you are on a line with some text pressing new task shortcut will convert it to a task
-      ☐ New tasks are nested as much as the previous task
-  More Actions:
-      ✔ Complete a task by pressing Alt+d @done
-      ☐ Re-open a completed task by pressing Alt+d
-      ✘ Cancel a task by pressing Alt+c @cancelled
-      ☐ Complete a cancelled task by pressing Alt+d
-      ☐ You can also use the Command pallette to complete or cancel a task by typing To Do:Complete Task or To Do:Cancel Task 
-  Tagging:
-      ☐ You can add tags using @ sign, like this @tag
-      ☐ You can use following pre-existing tags to mark tasks @critical @high @low @today 
-      ☐ Auto intellisense is provided to help you in finding tags
+Integrations / CI:
+  ☐ Github @low
+  ☐ GitFlow @high
+  ☐ Travis (https://travis-ci.com/nodexchange/next-blog) @critical
+  ☐ Test coverage @critical
+  ☐ Wercker @critical
+  ☐ GitLab @critical
 
-☐ More to come... Check https://github.com/sandy081/vscode-todotasks
+Other:
+    ✔ Storybook @critical @done (2/28/2019, 12:40:17 PM)
+    ✔ emmet plugin @critical @done (2/28/2019, 12:40:20 PM)
+    ☐ learn more react snippets (rcf etc.) @critical
 
+DevOps:
+  ☐ Elastic Beanstalk. @critical
+  ☐ Elastic Search. @critical
+  ☐ Docker in elastic. @critical
+  ☐ Datadog / dashboard monitoring (check apollo pricing for names).  @low
+  ☐ server monitoring / load balancer.  @low
 

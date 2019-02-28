@@ -16,14 +16,17 @@ const Header = () => (
     <Link href="/next">
       <a style={linkStyle}>Next</a>
     </Link>
+    <Link href="/graphqldemo">
+      <a style={linkStyle}>Graphql</a>
+    </Link>
     <li>
-      <a href='/robots.txt'>/robots.txt</a>
+      <a href='/static/robots.txt'>/robots.txt</a>
     </li>
     <li>
-      <a href='/sitemap.xml'>/sitemap.xml</a>
+      <a href='/static/sitemap.xml'>/sitemap.xml</a>
     </li>
     <li>
-      <a href='/favicon.ico'>/favicon.ico</a>
+      <a href='/static/favicon.ico'>/favicon.ico</a>
     </li>
     <li>
       <a href='/apidemo'>/apidemo</a>

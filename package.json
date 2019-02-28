@@ -4,11 +4,27 @@
   "description": "2019 keystonejs next.js graphql react and react-redux",
   "main": "server.js",
   "dependencies": {
+    "apollo-boost": "^0.1.28",
+    "apollo-client": "^2.4.13",
+    "apollo-client-preset": "^1.0.8",
+    "axios": "^0.18.0",
+    "cors": "^2.8.5",
     "express": "^4.16.4",
+    "express-graphql": "^0.7.1",
+    "graphql": "^14.1.1",
+    "graphql-anywhere": "^4.1.28",
+    "graphql-tag": "^2.10.1",
     "isomorphic-unfetch": "^3.0.0",
     "next": "^8.0.1",
+    "next-redux-wrapper": "^3.0.0-alpha.1",
+    "prop-types": "^15.7.2",
     "react": "^16.8.2",
-    "react-dom": "^16.8.2"
+    "react-apollo": "^2.4.1",
+    "react-dom": "^16.8.2",
+    "react-redux": "^6.0.1",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.3.3",
