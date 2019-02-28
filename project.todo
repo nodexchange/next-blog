@@ -17,6 +17,7 @@ Frontend:
   ☐ nextjs translations / i[]
   ☐ nextjs SEO best practises
   ☐ nextjs image file imports
+  ☐ experiment with the apollo client data request from get InitialProps / within pages only
   
 Backend:
   ☐ custom ssr with nextjs @low
@@ -38,7 +39,9 @@ Integrations / CI:
   ☐ GitLab @critical
 
 Other:
-    ☐ Storybook @critical
+    ✔ Storybook @critical @done (2/28/2019, 12:40:17 PM)
+    ✔ emmet plugin @critical @done (2/28/2019, 12:40:20 PM)
+    ☐ learn more react snippets (rcf etc.) @critical
 
 DevOps:
   ☐ Elastic Beanstalk. @critical
