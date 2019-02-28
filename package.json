@@ -4,6 +4,7 @@
   "description": "2019 keystonejs next.js graphql react and react-redux",
   "main": "server.js",
   "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
     "apollo-boost": "^0.1.28",
     "apollo-client": "^2.4.13",
     "apollo-client-preset": "^1.0.8",
@@ -38,9 +39,11 @@
     "enzyme-adapter-react-16": "^1.9.1",
     "enzyme-to-json": "^3.3.5",
     "jest": "^24.1.0",
+    "node-sass": "^4.11.0",
     "nodemon": "^1.18.10",
     "react-addons-test-utils": "^15.6.2",
-    "react-test-renderer": "^16.8.2"
+    "react-test-renderer": "^16.8.2",
+    "sass-loader": "^7.1.0"
   },
   "scripts": {
     "test": "jest",

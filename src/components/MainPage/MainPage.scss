@@ -1,0 +1,9 @@
+$color: #2ecc71;
+
+#main {
+  background-color: $color;
+  font-size: 40px;
+  :hover {
+    background-color: darken($color, 20%);
+  }
+}
