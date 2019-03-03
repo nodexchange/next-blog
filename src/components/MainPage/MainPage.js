@@ -43,7 +43,7 @@ const MainPage = (props) => {
             } 
           }
         </Query>
-      <HelloWorld />
+      <HelloWorld todos={ [ { completed:true, text:'text1' }, { completed:false, text:'text2' } ] } onTodoClick={ () => { console.log('CLICK') }} />
     </div>
   )
 }

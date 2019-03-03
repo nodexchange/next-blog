@@ -15,8 +15,10 @@ Frontend:
   ✔ containers / components export indexing.  @low @done (2/21/2019, 9:41:02 PM)ß
   ☐ nextjs json config imports
   ☐ nextjs translations / i[]
-  ☐ nextjs SEO best practises
+  ☐ nextjs SEO best practises (https://github.com/zeit/next.js/tree/canary/examples/with-next-seo)
   ☐ experiment with the apollo client data request from get InitialProps / within pages only
+  ☐ prefetch (https://github.com/zeit/next.js/blob/canary/examples/with-data-prefetch/pages/article.js) 
+  ☐ refresh knowledge on ToDo redux.
   
 Backend:
   ☐ custom ssr with nextjs @low
