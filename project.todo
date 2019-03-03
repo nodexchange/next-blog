@@ -19,6 +19,9 @@ Frontend:
   ☐ experiment with the apollo client data request from get InitialProps / within pages only
   ☐ prefetch (https://github.com/zeit/next.js/blob/canary/examples/with-data-prefetch/pages/article.js) 
   ☐ refresh knowledge on ToDo redux.
+  ☐ learn about reselect
+  ☐ learn about redux-saga
+  ☐ learn redux-thunk
   
 Backend:
   ☐ custom ssr with nextjs @low
