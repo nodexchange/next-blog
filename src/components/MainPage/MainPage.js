@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import Link from 'next/link'
-import { HelloWorld, Shows } from '../../components'
+import { Shows } from '../../components'
+import { TodoList } from '../../containers'
 
 import style from './MainPage.scss'
 
@@ -43,7 +44,7 @@ const MainPage = (props) => {
             } 
           }
         </Query>
-      <HelloWorld todos={ [ { completed:true, text:'text1' }, { completed:false, text:'text2' } ] } onTodoClick={ () => { console.log('CLICK') }} />
+      <TodoList todos={ [ { id:0, completed:true, text:'text1' }, { id:0, completed:false, text:'text2' } ] } onTodoClick={ () => { console.log('CLICK') }} />
     </div>
   )
 }

@@ -13,7 +13,7 @@ class Index extends React.Component {
   }
 
   componentDidMount () {
-    this.timer = this.props.startClock()
+    // this.timer = this.props.startClock()
   }
 
   componentWillUnmount () {
