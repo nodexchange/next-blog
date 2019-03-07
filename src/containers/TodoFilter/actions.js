@@ -15,7 +15,7 @@
  *    }
  */
 
-import { SHOW_ALL, SHOW_COMPLETED. SHOW_ACTIVE } from './constants';
+import { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } from './constants';
 
 /**
  * Changes the input field of the form

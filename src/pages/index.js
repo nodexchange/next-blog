@@ -2,6 +2,7 @@ import { Layout, MainPage } from '../components'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { startClock } from '../redux/store'
+import { AddTodo } from '../containers';
 
 // import fetch from 'isomorphic-unfetch'
 
@@ -13,6 +14,9 @@ class Index extends React.Component {
   }
 
   componentDidMount () {
+    const { dispatch } = this.props
+    // console.log('>>> DID MOUNT <<<<')
+    // console.log(dispatch)
     // this.timer = this.props.startClock()
   }
 
@@ -21,19 +25,28 @@ class Index extends React.Component {
   }
 
   render () {
+    // const { dispatch } = this.props
+    // console.log('>>> RENDER MOUNT <<<<')
+    // console.log(dispatch)
     return (
       <Layout>
-        <MainPage {...this.props} />
+        <AddTodo />
+        <MainPage {...this.props } />
       </Layout>
     )
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    startClock: bindActionCreators(startClock, dispatch)
-  }
-}
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     startClock: () => {
+//       console.log('START CLOCK')
+//     }
+//   }
+// }
+
+const mapDispatchToProps = () => {}
+const mapStateToProps = () => {}
 
 // Index.getInitialProps = async function() {
 //   const res = await fetch('http://localhost:3000/_data/shows')
@@ -47,7 +60,4 @@ const mapDispatchToProps = dispatch => {
 // }
 // export default Index
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(Index)
+export default connect()(Index)

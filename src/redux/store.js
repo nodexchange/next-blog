@@ -1,58 +1,25 @@
 import { createStore, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunkMiddleware from 'redux-thunk'
+import { fromJS } from 'immutable'
 
-const exampleInitialState = {
-  lastUpdate: 0,
-  light: false,
-  count: 0
-}
+import rootReducer from '../containers/reducers'
+
+// The initial state of the App
+// const initialState = fromJS({
+//   add: {},
+//   timer: {}
+// });
 
 export const actionTypes = {
   ADD: 'ADD',
   TICK: 'TICK'
 }
 
-// REDUCERS
-export const reducer = (state = exampleInitialState, action) => {
-  console.log('>>> reducer', action.type);
-  switch (action.type) {
-    case actionTypes.TICK:
-      return Object.assign({}, state, {
-        lastUpdate: action.ts,
-        light: !!action.light
-      })
-    case actionTypes.ADD:
-      return Object.assign({}, state, {
-        count: state.count + 1
-      })
-    default:
-      return state
-  }
-}
-
-// ACTIONS
-export const serverRenderClock = isServer => dispatch => {
-  console.log('>>> ACTION serverRenderClock', actionTypes);
-  return dispatch({ type: actionTypes.TICK, light: !isServer, ts: Date.now() })
-}
-
-export const startClock = () => dispatch => {
-  console.log('>>> ACTION startClock', actionTypes);
-  return setInterval(
-    () => dispatch({ type: actionTypes.TICK, light: true, ts: Date.now() }),
-    1000
-  )
-}
-
-export const addCount = () => dispatch => {
-  return dispatch({ type: actionTypes.ADD })
-}
-
-export const initStore = (initialState = exampleInitialState) => {
+export const initStore = (state = {}) => {
   return createStore(
-    reducer,
-    initialState,
+    rootReducer,
+    {},
     composeWithDevTools(applyMiddleware(thunkMiddleware))
   )
 }

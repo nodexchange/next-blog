@@ -11,8 +11,8 @@
  */
 import { combineReducers } from 'redux'
 import { fromJS } from 'immutable'
-
-import { ADD_TODO, TOGGLE_TODO, SET_VISIBILITY_FILTER } from './constants'
+import { SET_VISIBILITY_FILTER } from './constants'
+import { VisibilityFilters } from './actions'
 
 // The initial state of the App
 const initialState = fromJS({
@@ -20,24 +20,13 @@ const initialState = fromJS({
   todos: []
 });
 
-const todos = (state = initialState, action) => {
+const visibilityFilter = (state = VisibilityFilters.SHOW_ALL, action) => {
   switch (action.type) {
-    case ADD_TODO:
-      return [
-        ...state,
-        {
-          id: action.id,
-          text: action.text,
-          completed: false
-        }
-      ]
-    case TOGGLE_TODO:
-      return state.map(todo =>
-        todo.id === action.id ? { ...todo, completed: !todo.completed } : todo
-      )
+    case SET_VISIBILITY_FILTER:
+      return action.filter
     default:
       return state
   }
 }
 
-export default todos
+export default visibilityFilter

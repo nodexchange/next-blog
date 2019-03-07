@@ -44,7 +44,7 @@ const MainPage = (props) => {
             } 
           }
         </Query>
-      <TodoList todos={ [ { id:0, completed:true, text:'text1' }, { id:0, completed:false, text:'text2' } ] } onTodoClick={ () => { console.log('CLICK') }} />
+      {/* <TodoList todos={ [ { id:0, completed:true, text:'text1' }, { id:0, completed:false, text:'text2' } ] } onTodoClick={ () => { console.log('CLICK') }} /> */}
     </div>
   )
 }

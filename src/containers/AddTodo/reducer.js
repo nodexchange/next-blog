@@ -9,20 +9,13 @@
  * case YOUR_ACTION_CONSTANT:
  *   return state.set('yourStateVariable', true);
  */
-import { combineReducers } from 'redux'
-import { fromJS } from 'immutable'
+import { ADD_TODO } from './constants'
 
-import { ADD_TODO, TOGGLE_TODO, SET_VISIBILITY_FILTER } from './constants'
 
-// The initial state of the App
-const initialState = fromJS({
-  username: '',
-  todos: []
-});
-
-const todos = (state = initialState, action) => {
+const addTodoReducer = (state = [], action) => {
+  console.log('>>> reducer', action.type);
   switch (action.type) {
-    case ADD_TODO:
+    case 'ADD_TODO':
       return [
         ...state,
         {
@@ -31,13 +24,9 @@ const todos = (state = initialState, action) => {
           completed: false
         }
       ]
-    case TOGGLE_TODO:
-      return state.map(todo =>
-        todo.id === action.id ? { ...todo, completed: !todo.completed } : todo
-      )
     default:
       return state
   }
 }
 
-export default todos
+export default addTodoReducer

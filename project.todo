@@ -2,6 +2,13 @@ Basics:
   ✔ branch - feature @done (2/21/2019, 8:42:17 AM)
   ✔ dev branch @done (2/21/2019, 8:42:19 AM)
   ✔ bugfixes @done (2/21/2019, 8:42:20 AM)
+Aim:
+  ☐ to create a responsive blog like for #100daysofcode
+  ☐ should be responsive
+  ☐ should have admin panel (secured login)
+  ☐ speech recognition
+  ☐ accessiblity
+
 Frontend:
   ☐ read more about branches management (features, bugfixes) @low
   ✔ react @critical @done (2/21/2019, 9:40:50 PM)
