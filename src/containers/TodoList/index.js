@@ -1,25 +1,20 @@
-import { connect } from 'react-redux';
-import { compose } from 'redux';
-import injectReducer from 'utils/injectReducer';
-
-import { loadRepos } from '../App/actions';
-import { changeUsername } from './actions';
-import reducer from './reducer';
-import TodoList from './TodoList';
+import { connect } from 'react-redux'
+import { changeUsername } from './actions'
+import TodoList from './TodoList'
 
 const mapDispatchToProps = (dispatch) => ({
   onChangeUsername: (evt) => dispatch(changeUsername(evt.target.value)),
-  onSubmitForm: (evt) => {
-    if (evt !== undefined && evt.preventDefault) evt.preventDefault();
-    dispatch(loadRepos());
+  onTodoClick: (evt) => dispatch(onTodoClick(evt.target.value))
+})
+
+const mapStateToProps = (state) => {
+  const todos = state.todos.toJS();
+  return {
+    todos: todos.todos,
   }
-});
+}
 
-const mapStateToProps = () => {};
+const withConnect = connect(mapStateToProps, mapDispatchToProps)
 
-const withConnect = connect(mapStateToProps, mapDispatchToProps);
-
-const withReducer = injectReducer({ key: 'TodoList', reducer });
-
-export default compose(withReducer, withConnect)(TodoList);
-export { mapDispatchToProps };
+const TodoListConnected = withConnect(TodoList)
+export default TodoListConnected

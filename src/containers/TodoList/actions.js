@@ -15,7 +15,7 @@
  *    }
  */
 
-import { SHOW_ALL, SHOW_COMPLETED. SHOW_ACTIVE } from './constants';
+import { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } from './constants';
 
 /**
  * Changes the input field of the form
@@ -24,14 +24,6 @@ import { SHOW_ALL, SHOW_COMPLETED. SHOW_ACTIVE } from './constants';
  *
  * @return {object}    An action object with a type of CHANGE_USERNAME
  */
-
-let nextTodoId = 0
-export const addTodo = text => ({
-  type: 'ADD_TODO',
-  id: nextTodoId++,
-  text
-})
-
 export const setVisibilityFilter = filter => ({
   type: 'SET_VISIBILITY_FILTER',
   filter
@@ -42,8 +34,12 @@ export const toggleTodo = id => ({
   id
 })
 
-export const VisibilityFilters = {
-  SHOW_ALL: 'SHOW_ALL',
-  SHOW_COMPLETED: 'SHOW_COMPLETED',
-  SHOW_ACTIVE: 'SHOW_ACTIVE'
-}
+export const changeUsername = id => ({
+  type: 'CHANGE_USER',
+  id
+})
+
+export const onTodoClick = id => ({
+  type: 'TODO_CLICK',
+  id
+})

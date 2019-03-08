@@ -6,17 +6,17 @@ import { fromJS } from 'immutable'
 import rootReducer from '../containers/reducers'
 
 // The initial state of the App
-// const initialState = fromJS({
-//   add: {},
-//   timer: {}
-// });
+const initialState = fromJS({
+  todos: [
+    {
+      id:0,
+      completed: false,
+      text: 'My static todo'
+    }
+  ]
+});
 
-export const actionTypes = {
-  ADD: 'ADD',
-  TICK: 'TICK'
-}
-
-export const initStore = (state = {}) => {
+export const initStore = (state = initialState) => {
   return createStore(
     rootReducer,
     {},

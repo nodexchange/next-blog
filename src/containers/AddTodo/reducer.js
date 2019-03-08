@@ -11,6 +11,18 @@
  */
 import { ADD_TODO } from './constants'
 
+/*
+const reducer = (courses = initialState, action) => {
+    courses = Immutable.fromJS(courses) // converting courses to an immutable object
+    if (action.type == 'FETCHING_COURSES_SUCCESS') {
+        return courses
+            .set('status', 'success')
+            .set('error', null)
+            .set('items', action.items)
+            .toJS() // returning usual JS object
+    }
+};
+*/
 
 const addTodoReducer = (state = [], action) => {
   console.log('>>> reducer', action.type);

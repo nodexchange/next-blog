@@ -9,28 +9,22 @@
  * case YOUR_ACTION_CONSTANT:
  *   return state.set('yourStateVariable', true);
  */
-import { combineReducers } from 'redux'
 import { fromJS } from 'immutable'
 
-import { ADD_TODO, TOGGLE_TODO, SET_VISIBILITY_FILTER } from './constants'
+import { TOGGLE_TODO } from './constants'
 
-// The initial state of the App
 const initialState = fromJS({
-  username: '',
-  todos: []
+  todos: [
+    {
+      id:0,
+      completed: false,
+      text: 'My static todo'
+    }
+  ]
 });
 
 const todos = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_TODO:
-      return [
-        ...state,
-        {
-          id: action.id,
-          text: action.text,
-          completed: false
-        }
-      ]
     case TOGGLE_TODO:
       return state.map(todo =>
         todo.id === action.id ? { ...todo, completed: !todo.completed } : todo
