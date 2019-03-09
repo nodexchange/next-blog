@@ -9,7 +9,6 @@
  * case YOUR_ACTION_CONSTANT:
  *   return state.set('yourStateVariable', true);
  */
-import { combineReducers } from 'redux'
 import { SET_VISIBILITY_FILTER } from './constants'
 
 export default (initialState) => {

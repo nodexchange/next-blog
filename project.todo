@@ -8,6 +8,8 @@ Aim:
   ☐ should have admin panel (secured login)
   ☐ speech recognition
   ☐ accessiblity
+  ☐ understand immutable.js power
+  ☐ understand different reducer state mappings / initial states
 
 Frontend:
   ☐ read more about branches management (features, bugfixes) @low

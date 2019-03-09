@@ -25,7 +25,7 @@ import { ADD_TODO } from './constants';
  * @return {object}    An action object with a type of CHANGE_USERNAME
  */
 
-let nextTodoId = 0
+let nextTodoId = 1
 export const addTodo = text => ({
   type: ADD_TODO,
   id: nextTodoId++,

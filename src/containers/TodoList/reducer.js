@@ -12,7 +12,6 @@
 import { TOGGLE_TODO } from './constants'
 
 export default (initialState) => {
-  console.log('ARGUMENT', initialState)
   const todosReducer = (state = initialState, action) => {
     switch (action.type) {
       case TOGGLE_TODO:

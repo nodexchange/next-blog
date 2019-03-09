@@ -7,7 +7,7 @@ const initialState = fromJS({
     {
       id:0,
       completed: false,
-      text: 'My static todo'
+      text: 'My initial todo'
     }
   ]
 });
