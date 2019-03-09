@@ -23,22 +23,23 @@ const reducer = (courses = initialState, action) => {
     }
 };
 */
-
-const addTodoReducer = (state = [], action) => {
-  console.log('>>> reducer', action.type);
-  switch (action.type) {
-    case 'ADD_TODO':
-      return [
-        ...state,
-        {
-          id: action.id,
-          text: action.text,
-          completed: false
-        }
-      ]
-    default:
-      return state
+export default (initialState) => {
+  const addTodoReducer = (state = initialState, action) => {
+    console.log('>>> reducer', action.type, state);
+    switch (action.type) {
+      case 'ADD_TODO':
+        return [
+          ...state,
+          {
+            id: action.id,
+            text: action.text,
+            completed: false
+          }
+        ]
+      default:
+        return state
+    }
   }
+  console.log('ARGUMENT', initialState)
+  return addTodoReducer
 }
-
-export default addTodoReducer

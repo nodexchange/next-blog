@@ -9,29 +9,19 @@
  * case YOUR_ACTION_CONSTANT:
  *   return state.set('yourStateVariable', true);
  */
-import { fromJS } from 'immutable'
-
 import { TOGGLE_TODO } from './constants'
 
-const initialState = fromJS({
-  todos: [
-    {
-      id:0,
-      completed: false,
-      text: 'My static todo'
+export default (initialState) => {
+  console.log('ARGUMENT', initialState)
+  const todosReducer = (state = initialState, action) => {
+    switch (action.type) {
+      case TOGGLE_TODO:
+        return state.map(todo =>
+          todo.id === action.id ? { ...todo, completed: !todo.completed } : todo
+        )
+      default:
+        return state
     }
-  ]
-});
-
-const todos = (state = initialState, action) => {
-  switch (action.type) {
-    case TOGGLE_TODO:
-      return state.map(todo =>
-        todo.id === action.id ? { ...todo, completed: !todo.completed } : todo
-      )
-    default:
-      return state
   }
+  return todosReducer
 }
-
-export default todos
