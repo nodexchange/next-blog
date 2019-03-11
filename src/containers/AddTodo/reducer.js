@@ -24,24 +24,18 @@ const reducer = (courses = initialState, action) => {
 };
 */
 export default (initialState) => {
-  const addTodoReducer = (state = initialState, action) => {
+  const addTodoReducer = (state = initialState.get('todos'), action) => {
     switch (action.type) {
       case ADD_TODO:
+        // let list = state.get('list').toJS();
         console.log('>>> ADD_TODO', state.toJS());
-//         const map1 = Map({ a: { b: 2 }})
-// Map1 = map1.setIn([‘a’,  ‘b’], 3) 
-// Map { a: { b: 3 }}
-        // state.updateIn(['todos'], list => list.push({
-        //   id: action.id,
-        //   text: action.text,
-        //   completed: false
-        // }));
+
         const newItem = {
           id: action.id,
           text: action.text,
           completed: false
         }
-        state = state.update('todos', todos => todos.push(newItem));
+        state = state.update('list', todos => todos.push(newItem));
 
         // state = state.updateIn(['todos'], subList => {
         //   return subList.concat(newItem);

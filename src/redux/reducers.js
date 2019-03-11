@@ -1,4 +1,4 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from 'redux-immutable'
 import addTodoReducer from '../containers/AddTodo/reducer'
 import TimerReducer from '../containers/Timer/reducer'
 import TodoListReducer from '../containers/TodoList/reducer'
@@ -7,7 +7,7 @@ import initialState from './initialState'
 
 const rootReducer = combineReducers({
   add: addTodoReducer(initialState),
-  timer: TimerReducer(initialState),
+  // timer: TimerReducer(initialState),
   todos: TodoListReducer(initialState)
 });
 

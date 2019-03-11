@@ -12,12 +12,13 @@
 import { TOGGLE_TODO } from './constants'
 
 export default (initialState) => {
-  const todosReducer = (state = initialState, action) => {
+  const todosReducer = (state = initialState.get('todos'), action) => {
     switch (action.type) {
       case TOGGLE_TODO:
-        return state.map(todo =>
-          todo.id === action.id ? { ...todo, completed: !todo.completed } : todo
-        )
+        console.log('togle')
+        // return state.map(todo =>
+        //   todo.id === action.id ? { ...todo, completed: !todo.completed } : todo
+        // )
       default:
         return state
     }

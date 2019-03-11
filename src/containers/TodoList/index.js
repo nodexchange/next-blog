@@ -8,9 +8,9 @@ const mapDispatchToProps = (dispatch) => ({
 })
 
 const mapStateToProps = (state) => {
-  const todos = state.add.toJS();
+  const todos = state.get('add').toJS();
   return {
-    todos: todos.todos,
+    todos: todos.list,
   }
 }
 
