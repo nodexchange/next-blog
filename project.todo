@@ -4,18 +4,19 @@ Basics:
   ✔ bugfixes @done (2/21/2019, 8:42:20 AM)
 Aim:
   ☐ to create a responsive blog like for #100daysofcode
+  ☐ or bachata london 2.0 (admin set events, dynamic timeline of events location etc.)
   ☐ should be responsive
   ☐ should have admin panel (secured login)
   ☐ speech recognition
   ☐ accessiblity
-  ☐ understand immutable.js power
-  ☐ understand different reducer state mappings / initial states
+  ✔ understand immutable.js power @done (3/13/2019, 2:18:59 PM)
+  ✔ understand different reducer state mappings / initial states @done (3/13/2019, 2:19:02 PM)
 
 Frontend:
   ☐ read more about branches management (features, bugfixes) @low
   ✔ react @critical @done (2/21/2019, 9:40:50 PM)
   ☐ react-blog @critical
-  ☐ react-redux (next.js) @today @critical (https://github.com/zeit/next.js/tree/canary/examples/with-apollo-and-redux)
+  ✔ react-redux (next.js) @today @critical (https://github.com/zeit/next.js/tree/canary/examples/with-apollo-and-redux) @done (3/13/2019, 2:19:44 PM)
   ✔ sass in next @high @done (2/28/2019, 1:35:31 PM)
   ✔ integrate apollo with front end @high @done (2/26/2019, 6:00:04 PM)
   ✔ nextjs @critical @done (2/21/2019, 9:40:58 PM)
@@ -27,7 +28,7 @@ Frontend:
   ☐ nextjs SEO best practises (https://github.com/zeit/next.js/tree/canary/examples/with-next-seo)
   ☐ experiment with the apollo client data request from get InitialProps / within pages only
   ☐ prefetch (https://github.com/zeit/next.js/blob/canary/examples/with-data-prefetch/pages/article.js) 
-  ☐ refresh knowledge on ToDo redux.
+  ✔ refresh knowledge on ToDo redux. @done (3/13/2019, 2:19:17 PM)
   ☐ learn about reselect
   ☐ learn about redux-saga
   ☐ learn redux-thunk
