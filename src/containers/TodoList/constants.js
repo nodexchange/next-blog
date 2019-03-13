@@ -10,3 +10,4 @@
  */
 
 export const TOGGLE_TODO = 'nextblog/TodoList/TOGGLE_TODO'
+export const ADD_TODO = 'nextblog/TodoList/ADD_TODO'

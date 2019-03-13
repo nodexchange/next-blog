@@ -1,16 +1,23 @@
 import PropTypes from 'prop-types'
 import { Todo } from '../../components'
+import { AddTodo } from '../../components'
 
-const TodoList = ({ todos, onTodoClick }) => (
-  <ul>
-    { 
-      todos ?
-        todos.map((todo, index) => (
-          <Todo key={index} {...todo} onClick={() => onTodoClick(index)} />
-        ))
-      : <div>TODOS NOT CONNECTED</div>
-    }
-  </ul>
+
+import { addTodoAction } from './actions'
+
+const TodoList = ({ todos, onTodoClick, addTodoClick }) => (
+  <div>
+    <AddTodo addTodoAction={addTodoClick} />
+    <ul>
+      { 
+        todos ?
+          todos.map((todo, index) => (
+            <Todo key={index} {...todo} onClick={() => onTodoClick(index)} />
+          ))
+        : <div>TODOS NOT CONNECTED</div>
+      }
+    </ul>
+  </div>
 )
 
 TodoList.propTypes = {

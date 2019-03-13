@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import Link from 'next/link'
 import { Shows } from '../../components'
-import { TodoList } from '../../containers'
 
 import style from './MainPage.scss'
 

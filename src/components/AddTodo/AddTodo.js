@@ -1,8 +1,7 @@
 import React from 'react'
-import { connect } from 'react-redux'
-import { addTodo } from './actions'
+import PropTypes from 'prop-types'
 
-let AddTodo = ({ dispatch }) => {
+let AddTodo = ({ addTodoAction }) => {
   let input
 
   return (
@@ -13,7 +12,8 @@ let AddTodo = ({ dispatch }) => {
           if (!input.value.trim()) {
             return
           }
-          dispatch(addTodo(input.value))
+          console.log(input.value)
+          addTodoAction(input.value)
           input.value = ''
         }}
       >
@@ -26,6 +26,10 @@ let AddTodo = ({ dispatch }) => {
       </form>
     </div>
   )
+}
+
+AddTodo.propTypes = {
+  addTodoAction: PropTypes.func.isRequired,
 }
 
 export default AddTodo

@@ -10,15 +10,17 @@
  *   return state.set('yourStateVariable', true);
  */
 import { SET_VISIBILITY_FILTER } from './constants'
+import { Map } from 'immutable';
 
-export default (initialState) => {
-  const visibilityFilter = (state = initialState, action) => {
-    switch (action.type) {
-      case SET_VISIBILITY_FILTER:
-        return action.filter
-      default:
-        return state
-    }
+const defaultState = Map({});
+
+const timerReducer = (state = defaultState, action) => {
+  switch (action.type) {
+    case SET_VISIBILITY_FILTER:
+      return action.filter
+    default:
+      return state
   }
-  return visibilityFilter
 }
+
+export default timerReducer

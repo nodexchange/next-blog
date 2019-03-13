@@ -1,16 +1,17 @@
 import { connect } from 'react-redux'
-import { changeUsername } from './actions'
+import { addTodoAction, changeUsername } from './actions'
 import TodoList from './TodoList'
 
 const mapDispatchToProps = (dispatch) => ({
   onChangeUsername: (evt) => dispatch(changeUsername(evt.target.value)),
-  onTodoClick: (evt) => dispatch(onTodoClick(evt.target.value))
+  onTodoClick: (evt) => dispatch(onTodoClick(evt.target.value)),
+  addTodoClick: (value) => dispatch(addTodoAction(value))
 })
 
 const mapStateToProps = (state) => {
-  const todos = state.add.toJS();
+  const todos = state.todos.toJS();
   return {
-    todos: todos.todos,
+    todos: todos.data,
   }
 }
 

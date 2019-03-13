@@ -2,7 +2,7 @@ import { Layout, MainPage } from '../components'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { startClock } from '../redux/store'
-import { AddTodo, TodoList } from '../containers';
+import { TodoList } from '../containers';
 
 // import fetch from 'isomorphic-unfetch'
 
@@ -30,7 +30,6 @@ class Index extends React.Component {
     // console.log(dispatch)
     return (
       <Layout>
-        <AddTodo />
         <TodoList />
         <MainPage {...this.props } />
       </Layout>
