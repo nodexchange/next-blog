@@ -1,5 +1,5 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import HelloWorld from './HelloWorld';
+import HelloWorld from './Todo';
 
-storiesOf('Basic', module).add('HelloWorld', () => <HelloWorld />);
+storiesOf('Basic', module).add('HelloWorld', () => <Todo />);
