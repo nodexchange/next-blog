@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import Link from 'next/link'
 import { Shows } from '../../components'
+import { TimelineLoaded } from '../../components'
 
 import style from './MainPage.scss'
 
@@ -11,10 +12,12 @@ const SHOWS_QUERY = gql
 `
   query ShowsQuery {
     shows {
-      score
       show {
         id
         name
+        language
+        type
+        premiered
       }
     }
   }
@@ -38,6 +41,7 @@ const MainPage = (props) => {
               }
               // console.log(data)
               return <Fragment>
+                <TimelineLoaded events={data.shows} />
                 <Shows {...data} />
               </Fragment>
             } 

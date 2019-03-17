@@ -37,7 +37,9 @@ const ShowDetails = new GraphQLObjectType({
     id: { type: GraphQLString },
     name: { type: GraphQLString },
     language: { type: GraphQLString },
-    summary: { type: GraphQLString }
+    summary: { type: GraphQLString },
+    type: { type: GraphQLString },
+    premiered: { type: GraphQLString }
   })
 });
 

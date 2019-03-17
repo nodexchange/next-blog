@@ -1,7 +1,7 @@
 const sortByDate = (a, b) => new Date(b).valueOf() - new Date(a).valueOf()
 
 const getDayForEvent = event => {
-    const date = new Date(event.createdAt)
+    const date = new Date(event.show.premiered)
     date.setMilliseconds(0)
     date.setSeconds(0)
     date.setMinutes(0)
@@ -11,6 +11,7 @@ const getDayForEvent = event => {
 
 const groupByDay = events => {
     const groups = events.reduce((days, event) => {
+        console.log(event)
         const day = getDayForEvent(event)
         if (!days[day]) {
             days[day] = []
