@@ -17,18 +17,18 @@ const styles = {
 const EventItemView = ({ event, classes }) => (
     <ListItem>
         <ListItemAvatar>
-            <Avatar user={event.author} />
+            <Avatar user={event.show.language} />
         </ListItemAvatar>
         <ListItemText
             primary={
                 <div className={classes.truncate}>
                     <strong>
-                        {event.author ? event.author.name : 'Anonymous'}
+                        {event.show.type ? event.show.type : 'Anonymous'}
                     </strong>{' '}
-                    {event.label}
+                    {event.show.name}
                 </div>
             }
-            secondary={new Date(event.createdAt).toLocaleString()}
+            secondary={new Date(event.show.premiered).toLocaleString()}
         />
     </ListItem>
 )

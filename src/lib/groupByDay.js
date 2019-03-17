@@ -11,7 +11,6 @@ const getDayForEvent = event => {
 
 const groupByDay = events => {
     const groups = events.reduce((days, event) => {
-        console.log(event)
         const day = getDayForEvent(event)
         if (!days[day]) {
             days[day] = []

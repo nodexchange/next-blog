@@ -4,21 +4,21 @@ import EventList from './EventList'
 
 const events = [
     {
-        id: 1234,
-        label: 'modified post "Hello World"',
-        createdAt: '2019-01-10T17:15:56.000Z',
-        author: {
-            name: 'John Doe',
-            email: 'jitewaboh@lagify.com',
+        show: {
+            name: 'created new post "Hello World"',
+            id: 1233,
+            premiered: '2019-01-11T16:34:00.000Z',
+            type: "Animation",
+            language: "English"
         },
     },
     {
-        id: 1233,
-        label: 'created new post "Hello World"',
-        createdAt: '2019-01-10T08:54:00.000Z',
-        author: {
-            name: 'John Doe',
-            email: 'jitewaboh@lagify.com',
+        show: {
+            name: 'created new post "Hello World"',
+            id: 1236,
+            premiered: '2019-01-10T16:34:00.000Z',
+            type: "Animation",
+            language: "English"
         },
     },
 ]

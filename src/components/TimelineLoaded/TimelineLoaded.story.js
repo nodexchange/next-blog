@@ -4,54 +4,49 @@ import TimelineLoaded from './TimelineLoaded';
 
 const events = [
     {
-        id: 1234,
-        label: 'modified post "Hello World"',
         show: {
-            premiered: '2019-01-10T17:15:56.000Z',
-        },
-        author: {
-            name: 'John Doe',
-            email: 'jitewaboh@lagify.com',
+            name: 'created new post "Hello World"',
+            id: 1233,
+            premiered: '2019-01-11T16:34:00.000Z',
+            type: "Animation",
+            language: "English"
         },
     },
     {
-        id: 1233,
-        label: 'created new post "Hello World"',
         show: {
+            name: 'created new post "Hello World"',
+            id: 1236,
             premiered: '2019-01-10T16:34:00.000Z',
-        },
-        author: {
-            name: 'John Doe',
-            email: 'jitewaboh@lagify.com',
+            type: "Animation",
+            language: "English"
         },
     },
     {
-        id: 1232,
-        label:
-            'commented "I don\'t agree. You should never try to do things this way, or you\'ll end up in a bad place."',
         show: {
-            premiered: '2019-01-09T15:53:56.000Z',
-        },
-        author: {
-            name: 'Lela Feng',
-            email: 'lelafeng@example.com',
+            name: 'created new post "Hello World"',
+            id: 1237,
+            premiered: '2019-01-10T16:34:00.000Z',
+            type: "Animation",
+            language: "English"
         },
     },
     {
-        id: 1231,
-        label: 'deleted comment "Totally."',
         show: {
-            premiered: '2019-01-09T11:04:56.000Z',
-        },
-        author: {
-            name: 'Brandon Hood',
-            email: 'brandon@example.com',
+            name: 'created new post "Hello World"',
+            id: 1239,
+            premiered: '2019-01-12T16:34:00.000Z',
+            type: "Animation",
+            language: "English"
         },
     },
     {
-        id: 1230,
-        label: 'liked "Lorem Ipsum"',
-        createdAt: '2019-01-09T09:12:56.000Z',
+        show: {
+            name: 'created new post "Hello World"',
+            id: 1238,
+            premiered: '2019-01-12T16:34:00.000Z',
+            type: "Animation",
+            language: "English"
+        },
     },
 ];
 
