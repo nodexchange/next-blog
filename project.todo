@@ -11,6 +11,21 @@ Aim:
   ☐ accessiblity
   ✔ understand immutable.js power @done (3/13/2019, 2:18:59 PM)
   ✔ understand different reducer state mappings / initial states @done (3/13/2019, 2:19:02 PM)
+  ☐ microtransaction / paypal @critical
+  ☐ event promotions price @critical
+  ☐ 2nd bid system @critical
+  ☐ calendar view @critical
+  ☐ filters @critical
+  ☐ registation panel @critical
+  ☐ submit event as a guest (explain benefits) @critical
+  ☐ user panel @critical
+  ☐ admin to boost free promotions @critical
+  ☐ smart things around locations (user ip) @critical
+  ☐ search smart @critical
+  ☐ labels @critical
+  ☐ event preview
+  ☐ event preview
+  
 
 Frontend:
   ☐ read more about branches management (features, bugfixes) @low

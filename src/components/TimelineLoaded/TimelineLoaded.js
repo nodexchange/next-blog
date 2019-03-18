@@ -7,8 +7,8 @@ import EventList from "../EventList/EventList"
 import groupByDay from "../../lib/groupByDay"
 
 const styles = {
-  root: {
-    width: 600,
+  timeline: {
+    width: 610,
     margin: "auto"
   },
   day: {
@@ -39,7 +39,7 @@ const TimelineLoadedView = ({
     )
   }
   return (
-    <div className={classes.root}>
+    <div className={classes.timeline}>
       {days.map(day => (
         <div key={day} className={classes.day}>
           <Typography variant="subheading" gutterBottom>

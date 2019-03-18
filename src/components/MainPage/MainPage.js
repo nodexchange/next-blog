@@ -42,7 +42,6 @@ const MainPage = (props) => {
               // console.log(data)
               return <Fragment>
                 <TimelineLoaded events={data.shows} />
-                <Shows {...data} />
               </Fragment>
             } 
           }

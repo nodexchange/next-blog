@@ -12,9 +12,10 @@ const styles = {
         whiteSpace: 'nowrap',
         overflow: 'hidden',
         textOverflow: 'ellipsis',
+        cursor: 'pointer'
     },
     activeLink: {
-        // cursor: 'pointer'
+        cursor: 'pointer'
     }
 }
 
