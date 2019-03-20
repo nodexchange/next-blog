@@ -10,8 +10,8 @@ import { Query } from "react-apollo";
 
 const SHOWS_QUERY = gql
 `
-  query ShowsQuery {
-    shows {
+  query ShowsQuery($limit: Int, $offset: Int)   {
+    shows(limit: $limit, offset: $offset) {
       show {
         id
         name
@@ -30,9 +30,15 @@ const MainPage = (props) => {
       <div id="main">
         {props.title}
       </div>
-      <Query query={SHOWS_QUERY}>
+      <Query 
+        query={SHOWS_QUERY}
+        variables={{
+          offset: 0,
+          limit: 10
+        }}
+        >
           {
-            ({ loading, error, data }) => {
+            ({ loading, error, data, fetchMore }) => {
               if (loading) {
                 return <p>Loading...</p>
               }
@@ -41,7 +47,22 @@ const MainPage = (props) => {
               }
               // console.log(data)
               return <Fragment>
-                <TimelineLoaded events={data.shows} />
+                <TimelineLoaded
+                  events={data.shows}
+                  onLoadMore={() =>
+                    fetchMore({
+                      variables: {
+                        offset: data.feed.length,
+                      },
+                      updateQuery: (prev, { fetchMoreResult }) => {
+                        if (!fetchMoreResult) return prev;
+                        return Object.assign({}, prev, {
+                          feed: [...prev.feed, ...fetchMoreResult.feed],
+                        });
+                      },
+                    })
+                  }
+                />
               </Fragment>
             } 
           }

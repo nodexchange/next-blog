@@ -59,9 +59,13 @@ const RootQuery = new GraphQLObjectType({
   fields: {
     shows: {
       type: new GraphQLList(ShowInfo),
+      args: {
+        offset: { type: GraphQLInt },
+        limit: { type: GraphQLInt }
+      },
       resolve(parent, args) {
         return axios
-          .get('http://localhost:3000/_data/shows')
+          .get(`http://localhost:3000/_data/shows?limit=${args.limit}&offset=${args.offset}`)
           .then(res => res.data);
       }
     },

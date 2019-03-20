@@ -26,7 +26,7 @@ const getDayString = date =>
 
 const TimelineLoadedView = ({
   events = [],
-  handleLoadMore,
+  onLoadMore,
   total,
   classes
 }) => {
@@ -49,7 +49,7 @@ const TimelineLoadedView = ({
         </div>
       ))}
       {events.length < total && (
-        <Button variant="contained" onClick={handleLoadMore}>
+        <Button variant="contained" onClick={onLoadMore}>
           Load more events
         </Button>
       )}

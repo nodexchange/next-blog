@@ -31,12 +31,14 @@ app.prepare().then(() => {
 
   // When rendering client-side, we will request the same data from this route
   server.get('/_data/item', (req, res) => {
+    console.log(req.params.limit, req.params.offset)
     const data = api.getItem()
     res.json(data)
   })
 
   server.get('/_data/shows', (req, res) => {
-    const data = api.getShows();
+    console.log(req.query)
+    const data = api.getShows(req.query);
     res.json(data)
   })
 
