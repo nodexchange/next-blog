@@ -34,7 +34,7 @@ const MainPage = (props) => {
         query={SHOWS_QUERY}
         variables={{
           offset: 0,
-          limit: 10
+          limit: 5
         }}
         >
           {
@@ -49,15 +49,18 @@ const MainPage = (props) => {
               return <Fragment>
                 <TimelineLoaded
                   events={data.shows}
+                  total={10}
                   onLoadMore={() =>
                     fetchMore({
                       variables: {
-                        offset: data.feed.length,
+                        limit: 10,
+                        offset: data.shows.length,
                       },
                       updateQuery: (prev, { fetchMoreResult }) => {
                         if (!fetchMoreResult) return prev;
+                        console.log('HERE????', fetchMoreResult)
                         return Object.assign({}, prev, {
-                          feed: [...prev.feed, ...fetchMoreResult.feed],
+                          shows: [...prev.shows, ...fetchMoreResult.shows],
                         });
                       },
                     })
