@@ -9,7 +9,6 @@ import SHOWS_QUERY from './MainPage.query'
 const MainPage = (props) => {
   return (
     <div>
-      <h1 id={style.main}>Batman TV Shows</h1>
       <div id="main">
         {props.title}
       </div>

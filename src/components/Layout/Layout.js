@@ -1,13 +1,13 @@
-import React from "react"
+import React from 'react'
 import PropTypes from 'prop-types'
-import Grid from "@material-ui/core/Grid"
-import { withStyles } from "@material-ui/core/styles"
-import { Header } from "../../components"
+import Grid from '@material-ui/core/Grid'
+import { withStyles } from '@material-ui/core/styles'
+import { Header } from '../../components'
 
 const layoutStyle = {
   margin: 20,
   padding: 20,
-  border: "1px solid #DDD"
+  border: '1px solid #DDD'
 }
 
 const styles = theme => ({
@@ -16,7 +16,7 @@ const styles = theme => ({
   },
   paper: {
     padding: theme.spacing.unit * 2,
-    textAlign: "center",
+    textAlign: 'center',
     color: theme.palette.text.secondary
   }
 })
@@ -27,13 +27,13 @@ const Layout = props => {
   return (
     <div
       style={layoutStyle}
-      className={classes.root + " " + classes[props.selectedClass]}
+      className={classes.root + ' ' + classes[props.selectedClass]}
     >
       <Grid container spacing={24}>
         <Grid item xs={12}>
           <Header />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12}>
           {props.children}
         </Grid>
         <Grid item xs={12}>

@@ -15,8 +15,12 @@ const styles = {
     marginBottom: "1em"
   },
   details: {
-    marginLeft: '0',
-    width: '410px !important',
+    marginLeft: 90,
+    width: '610px !important',
+  },
+  main: {
+    margin: 'auto',
+    width: 610
   }
 }
 
