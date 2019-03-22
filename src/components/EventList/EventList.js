@@ -6,7 +6,7 @@ import EventItem from '../EventItem/EventItem'
 
 const styles = {
     root: {
-        width: 600,
+        width: 'auto',
     },
 }
 

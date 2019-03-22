@@ -9,10 +9,14 @@ import groupByDay from "../../lib/groupByDay"
 const styles = {
   timeline: {
     width: 610,
-    margin: "auto"
+    marginLeft: 'calc(50vw - 305px)',
   },
   day: {
     marginBottom: "1em"
+  },
+  details: {
+    marginLeft: '0',
+    width: '410px !important',
   }
 }
 
@@ -27,6 +31,7 @@ const getDayString = date =>
 const TimelineLoadedView = ({
   events = [],
   onLoadMore,
+  selectedClass,
   total,
   classes
 }) => {
@@ -39,7 +44,7 @@ const TimelineLoadedView = ({
     )
   }
   return (
-    <div className={classes.timeline}>
+    <div className={classes.timeline + ' ' + classes[selectedClass]}>
       {days.map(day => (
         <div key={day} className={classes.day}>
           <Typography variant="subheading" gutterBottom>
@@ -57,6 +62,4 @@ const TimelineLoadedView = ({
   )
 }
 
-const TimelineLoaded = withStyles(styles)(TimelineLoadedView)
-
-export default TimelineLoaded
+export default withStyles(styles)(TimelineLoadedView)

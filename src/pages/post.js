@@ -1,13 +1,13 @@
-import { Layout, MainPage } from "../components"
-import { TodoList } from "../containers"
+import { Layout } from "../components"
+import { TodoList, MainPage } from "../containers"
 import fetch from "isomorphic-unfetch"
 
 const Post = props => (
-  <Layout>
-    <h1>{props.show.name}</h1>
-    <p>{props.show.summary.replace(/<[\/]?p>/g, "")}</p>
-    <img src={props.show.image.medium} />
-    <MainPage {...props} />
+  <Layout selectedClass={'details'} >
+      <MainPage {...props} selectedClass={'details'} />
+      <h1>{props.show.name}</h1>
+      <p>{props.show.summary.replace(/<[\/]?p>/g, "")}</p>
+      <img src={props.show.image.medium} />
   </Layout>
 )
 

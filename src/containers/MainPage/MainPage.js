@@ -1,27 +1,10 @@
 import React, { Component, Fragment } from 'react'
 import Link from 'next/link'
-import { Shows } from '../../components'
-import { TimelineLoaded } from '../../components'
+import { TimelineLoaded, Loader } from '../../components'
 
 import style from './MainPage.scss'
-
-import gql from "graphql-tag";
-import { Query } from "react-apollo";
-
-const SHOWS_QUERY = gql
-`
-  query ShowsQuery($limit: Int, $offset: Int)   {
-    shows(limit: $limit, offset: $offset) {
-      show {
-        id
-        name
-        language
-        type
-        premiered
-      }
-    }
-  }
-`
+import { Query } from 'react-apollo'
+import SHOWS_QUERY from './MainPage.query'
 
 const MainPage = (props) => {
   return (
@@ -40,7 +23,7 @@ const MainPage = (props) => {
           {
             ({ loading, error, data, fetchMore }) => {
               if (loading) {
-                return <p>Loading...</p>
+                return <Loader />
               }
               if (error) {
                 console.log('apollo data fetch error', error);
@@ -50,6 +33,7 @@ const MainPage = (props) => {
                 <TimelineLoaded
                   events={data.shows}
                   total={10}
+                  selectedClass={props.selectedClass}
                   onLoadMore={() =>
                     fetchMore({
                       variables: {
