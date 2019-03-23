@@ -40,7 +40,7 @@ Frontend:
   ✔ seperate gql logic @low @done (3/21/2019, 2:11:03 PM)
   ✔ move mainpage to container @low @done (3/21/2019, 2:11:05 PM)
   ✔ timeline load and error states @low @done (3/21/2019, 4:05:42 PM)
-  ☐ dynamic material-ui values @low
+  ✔ dynamic material-ui values @low @done (3/23/2019, 8:12:03 PM)
   ☐ read more about branches management (features, bugfixes) @low
   ✔ react @critical @done (2/21/2019, 9:40:50 PM)
   ☐ react-blog @critical

@@ -1,15 +1,16 @@
 import fetch from 'isomorphic-unfetch'
 import PropTypes from 'prop-types'
 import Grid from '@material-ui/core/Grid'
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+import Card from '@material-ui/core/Card'
+import CardActionArea from '@material-ui/core/CardActionArea'
+import CardActions from '@material-ui/core/CardActions'
+import CardContent from '@material-ui/core/CardContent'
+import Slide from '@material-ui/core/Slide'
+import CardMedia from '@material-ui/core/CardMedia'
+import Button from '@material-ui/core/Button'
+import Typography from '@material-ui/core/Typography'
 
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles'
 
 import { Layout } from '../components'
 import { TodoList, MainPage } from '../containers'
@@ -23,12 +24,15 @@ const styles = {
   media: {
     height: 240,
   },
-};
+}
 
 const Post = props => {
-  const { classes } = props;
+  const { classes } = props
+  const checked = true
   return (
   <Layout selectedClass={'details'}>
+  <Slide direction="left" in={checked} mountOnEnter unmountOnExit>
+      
     <Grid container spacing={12}>
       <Grid item xs={6}>
         <MainPage {...props} selectedClass={'details'} />
@@ -61,6 +65,7 @@ const Post = props => {
         </Card>
       </Grid>
     </Grid>
+    </Slide>
   </Layout>
   )
 }

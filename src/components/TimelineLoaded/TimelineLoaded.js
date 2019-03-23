@@ -1,6 +1,7 @@
 import React from "react"
 import Typography from "@material-ui/core/Typography"
 import Button from "@material-ui/core/Button"
+import Slide from '@material-ui/core/Slide'
 import { withStyles } from "@material-ui/core/styles"
 
 import EventList from "../EventList/EventList"
@@ -47,22 +48,25 @@ const TimelineLoadedView = ({
       </Typography>
     )
   }
+  const checked = true //this.state;
   return (
-    <div className={classes.timeline + ' ' + classes[selectedClass]}>
-      {days.map(day => (
-        <div key={day} className={classes.day}>
-          <Typography variant="subheading" gutterBottom>
-            {getDayString(day)}
-          </Typography>
-          <EventList events={eventsByDay[day]} />
-        </div>
-      ))}
-      {events.length < total && (
-        <Button variant="contained" onClick={onLoadMore}>
-          Load more events
-        </Button>
-      )}
-    </div>
+    <Slide direction="right" in={checked} mountOnEnter unmountOnExit>
+      <div className={classes.timeline + ' ' + classes[selectedClass]}>
+        {days.map(day => (
+          <div key={day} className={classes.day}>
+            <Typography variant="subheading" gutterBottom>
+              {getDayString(day)}
+            </Typography>
+            <EventList events={eventsByDay[day]} />
+          </div>
+        ))}
+        {events.length < total && (
+          <Button variant="contained" onClick={onLoadMore}>
+            Load more events
+          </Button>
+        )}
+      </div>
+    </Slide>
   )
 }
 
