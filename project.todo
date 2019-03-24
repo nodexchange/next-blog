@@ -2,6 +2,14 @@ Basics:
   ✔ branch - feature @done (2/21/2019, 8:42:17 AM)
   ✔ dev branch @done (2/21/2019, 8:42:19 AM)
   ✔ bugfixes @done (2/21/2019, 8:42:20 AM)
+
+
+STORY DRIVEN DEVELOPMET PRINICIPLES: 
+  ☐ Storybook - key
+  ☐ Juniors work on non-connected components
+  ☐ Seniors containers
+  ☐ components requirements as a withstory element. 
+
 Aim:
   ☐ to create a responsive blog like for #100daysofcode
   ☐ or bachata london 2.0 (admin set events, dynamic timeline of events location etc.)
@@ -11,8 +19,28 @@ Aim:
   ☐ accessiblity
   ✔ understand immutable.js power @done (3/13/2019, 2:18:59 PM)
   ✔ understand different reducer state mappings / initial states @done (3/13/2019, 2:19:02 PM)
+  ☐ microtransaction / paypal @critical
+  ☐ event promotions price @critical
+  ☐ 2nd bid system @critical
+  ☐ calendar view @critical
+  ☐ filters @critical
+  ☐ registation panel @critical
+  ☐ submit event as a guest (explain benefits) @critical
+  ☐ user panel @critical
+  ☐ admin to boost free promotions @critical
+  ☐ smart things around locations (user ip) @critical
+  ☐ search smart @critical
+  ☐ labels @critical
+  ☐ event preview
+  ☐ event preview
+  
 
 Frontend:
+  ✔ query pagination fetchMore @today @done (3/21/2019, 7:31:43 AM)
+  ✔ seperate gql logic @low @done (3/21/2019, 2:11:03 PM)
+  ✔ move mainpage to container @low @done (3/21/2019, 2:11:05 PM)
+  ✔ timeline load and error states @low @done (3/21/2019, 4:05:42 PM)
+  ✔ dynamic material-ui values @low @done (3/23/2019, 8:12:03 PM)
   ☐ read more about branches management (features, bugfixes) @low
   ✔ react @critical @done (2/21/2019, 9:40:50 PM)
   ☐ react-blog @critical
@@ -23,7 +51,7 @@ Frontend:
   ✔ getInitialProps and async data fetch in nextjs @high @done (2/21/2019, 9:41:00 PM)
   ✔ containers / components logic split.  @low @done (2/21/2019, 9:41:01 PM)
   ✔ containers / components export indexing.  @low @done (2/21/2019, 9:41:02 PM)ß
-  ☐ nextjs json config imports
+  ✔ nextjs json config imports @done (3/19/2019, 3:16:07 PM)
   ☐ nextjs translations / i[]
   ☐ nextjs SEO best practises (https://github.com/zeit/next.js/tree/canary/examples/with-next-seo)
   ☐ experiment with the apollo client data request from get InitialProps / within pages only
@@ -34,8 +62,8 @@ Frontend:
   ☐ learn redux-thunk
   
 Backend:
-  ☐ custom ssr with nextjs @low
-  ☐ static root files (with express) @low
+  ✔ custom ssr with nextjs @low @done (3/19/2019, 3:16:44 PM)ß
+  ✔ static root files (with express) @low @done (3/19/2019, 3:16:47 PM)
   ☐ mongodb @high
   ☐ keystonejs
   ✔ apollo @critical (https://github.com/zeit/next.js/tree/canary/examples/with-apollo-and-redux) @done (2/26/2019, 6:00:07 PM)

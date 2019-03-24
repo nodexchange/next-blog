@@ -13,13 +13,14 @@ function getItem() {
   return parsedData
 }
 
-function getShows() {
-  console.log('Requested Item Data:', data)
-  return parsedShowData
+function getShows({offset, limit}) {
+  // console.log('Requested Show Data:', parsedShowData)
+  // console.log(parsedShowData.slice(offset, limit))
+  return parsedShowData.slice(offset, limit)
 }
 
 function getLaunches() {
-  console.log('Requested Item Data:', data)
+  console.log('Requested Launches Data:', data)
   return parsedLaunchesData
 }
 

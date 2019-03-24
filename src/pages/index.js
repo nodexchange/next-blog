@@ -1,8 +1,8 @@
-import { Layout, MainPage } from '../components'
+import { Layout  } from '../components'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { startClock } from '../redux/store'
-import { TodoList } from '../containers';
+import { TodoList, MainPage } from '../containers';
 
 // import fetch from 'isomorphic-unfetch'
 
@@ -29,9 +29,9 @@ class Index extends React.Component {
     // console.log('>>> RENDER MOUNT <<<<')
     // console.log(dispatch)
     return (
-      <Layout>
+      <Layout selectedClass={'default'}>
+        <MainPage {...this.props }  selectedClass={'main'} />
         <TodoList />
-        <MainPage {...this.props } />
       </Layout>
     )
   }
