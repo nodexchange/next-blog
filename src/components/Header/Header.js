@@ -1,6 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
 
+import { logout } from '../../lib/auth'
+
+
 const linkStyle = {
   marginRight: 15
 }
@@ -35,12 +38,19 @@ const Header = () => (
     <Link href="/static/favicon.ico">
       <a style={linkStyle}>favicon</a>
     </Link>
-    <Link href="/graphql">
-      <a style={linkStyle}>Graphql - simulator</a>
-    </Link>
     <Link href="/apidemo">
       <a style={linkStyle}>apidemo</a>
     </Link>
+    <Link href="/admin">
+      <a style={linkStyle}>Admin</a>
+    </Link>
+    <Link href='/login'>
+      <a style={linkStyle}>Login</a>
+    </Link>
+    <Link href='/profile'>
+      <a style={linkStyle}>Profile</a>
+    </Link>
+    <button onClick={logout}>Logout</button>
   </div>
 )
 

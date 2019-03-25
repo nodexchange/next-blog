@@ -3,6 +3,11 @@ const next = require('next')
 const api = require('./modules/get-item')
 const GraphQL = require('./modules/graphql')
 
+const httpProxy = require('http-proxy')
+const proxy = httpProxy.createProxyServer()
+const target = 'http://localhost:3001'
+
+
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev:dev, dir: './src' })
 const handle = app.getRequestHandler()
@@ -40,6 +45,16 @@ app.prepare().then(() => {
     console.log(req.query)
     const data = api.getShows(req.query);
     res.json(data)
+  })
+  server.post('/api/login', (req, res) => {
+    console.log('HERE>>> pre proxy LOGIN' + new Date())
+    proxy.web(req, res, { target }, error => {
+      console.log('Error!', error)
+    })
+  })
+  server.get('/api/profile', (req, res) => {
+    console.log('HERE>>> pre proxy PROFILE')
+    proxy.web(req, res, { target }, error => console.log('Error!', error))
   })
 
   server.get('/_data/launches', (req, res) => {

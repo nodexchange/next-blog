@@ -33,7 +33,9 @@ Aim:
   ☐ labels @critical
   ☐ event preview
   ☐ event preview
-  
+  ☐ with-next-i18next
+  ☐ devops dashboard
+  ☐ micro services (maybe linked to docker and orchestor?) link to [services folder]
 
 Frontend:
   ✔ query pagination fetchMore @today @done (3/21/2019, 7:31:43 AM)
