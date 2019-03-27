@@ -22,8 +22,8 @@ const styles = theme => ({
 })
 
 const Layout = props => {
-  const { classes } = props;
-
+  const { classes, login } = props
+  console.log('___ login  ' + login)
   return (
     <div
       style={layoutStyle}
@@ -31,7 +31,7 @@ const Layout = props => {
     >
       <Grid container spacing={24}>
         <Grid item xs={12}>
-          <Header />
+          <Header login={login} />
         </Grid>
         <Grid item xs={12}>
           {props.children}
@@ -45,7 +45,8 @@ const Layout = props => {
 }
 
 Layout.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
+  login: PropTypes.string
 }
 
 export default withStyles(styles)(Layout)

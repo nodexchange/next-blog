@@ -5,6 +5,7 @@
  *
  */
 export { default as AddTodo } from './AddTodo/AddTodo'
+export { default as Admin } from './Admin/Admin'
 export { default as Avatar } from './Avatar/Avatar'
 export { default as EventItem } from './EventItem/EventItem'
 export { default as Header } from './Header/Header'

@@ -6,9 +6,10 @@ import { withAuthSync } from '../lib/auth'
 
 const Profile = props => {
   const { name, login, bio, avatarUrl } = props.data
-
+  console.log('HERE??? ' + login)
+  
   return (
-    <Layout>
+    <Layout login={login}>
       <img src={avatarUrl} alt='Avatar' />
       <h1>{name}</h1>
       <p className='lead'>{login}</p>

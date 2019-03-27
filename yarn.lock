@@ -2474,7 +2474,7 @@ apollo-client-preset@^1.0.8:
     apollo-link-http "^1.3.1"
     graphql-tag "^2.4.2"
 
-apollo-client@^2.2.2, apollo-client@^2.4.13:
+apollo-client@^2.2.2, apollo-client@^2.4.13, apollo-client@^2.5.1:
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/apollo-client/-/apollo-client-2.5.1.tgz#36126ed1d32edd79c3713c6684546a3bea80e6d1"
   integrity sha512-MNcQKiqLHdGmNJ0rZ0NXaHrToXapJgS/5kPk0FygXt+/FmDCdzqcujI7OPxEC6e9Yw5S/8dIvOXcRNuOMElHkA==
@@ -5745,6 +5745,11 @@ graphql-anywhere@^4.1.0-alpha.0, graphql-anywhere@^4.1.28:
     apollo-utilities "^1.2.1"
     tslib "^1.9.3"
 
+graphql-ast-types-browser@~1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/graphql-ast-types-browser/-/graphql-ast-types-browser-1.0.2.tgz#474305af7e76f9692df6e50a88fb668ce258c4a4"
+  integrity sha512-QuKZ+Et3dE7SyO5c41eNPlJc7+HwQxOzHfmIhqzj4cUgAGyhSwVkKb7K24zom8y6y0VnG7Xb3RRypjIVvfIevQ==
+
 graphql-tag@^2.10.1, graphql-tag@^2.4.2:
   version "2.10.1"
   resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-2.10.1.tgz#10aa41f1cd8fae5373eaf11f1f67260a3cad5e02"
@@ -8971,6 +8976,11 @@ pkg-up@2.0.0:
   dependencies:
     find-up "^2.1.0"
 
+pluralize@~7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-7.0.0.tgz#298b89df8b93b0221dbf421ad2b1b1ea23fc6777"
+  integrity sha512-ARhBOdzS3e41FbkW/XWrTEtukqqLoK5+Z/4UeDaLuSW+39JPeFgs4gCGqsrJHVZX0fUrx//4OF0K1CUGwlIFow==
+
 pn@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/pn/-/pn-1.1.0.tgz#e2f4cef0e219f463c179ab37463e4e1ecdccbafb"
@@ -9314,10 +9324,10 @@ querystringify@^2.0.0:
   resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.1.0.tgz#7ded8dfbf7879dcc60d0a644ac6754b283ad17ef"
   integrity sha512-sluvZZ1YiTLD5jsqZcDmFyV2EwToyXZBfpoVOmktMmW+VEnhgakFHnasVph65fOjGPTWN0Nw3+XQaSeMayr0kg==
 
-ra-core@^2.8.0:
-  version "2.8.0"
-  resolved "https://registry.yarnpkg.com/ra-core/-/ra-core-2.8.0.tgz#2d89d45f35fa3fd5e8442ffac4be525c1c83319f"
-  integrity sha512-Ptnajlff2yKj7XyvZPVNUOCOsyG147xF+CX729me06layCmyJITo+fj6s34NMXelOv1lk1UI8MFJninpb39NAQ==
+ra-core@^2.8.3:
+  version "2.8.3"
+  resolved "https://registry.yarnpkg.com/ra-core/-/ra-core-2.8.3.tgz#32aeab39bea7003dc10ba105bf57d710925d5f65"
+  integrity sha512-0CzJ6OKg1y+vxa5M4BhrIoq6d3tXWNrbA2ma/9+G3N0R2NZSAeQRut1dANd5enedVLLrUmTElX3Ld0+D42x6wg==
   dependencies:
     classnames "~2.2.5"
     date-fns "^1.29.0"
@@ -9337,15 +9347,37 @@ ra-core@^2.8.0:
     redux-saga "~0.16.0"
     reselect "~3.0.0"
 
+ra-data-graphql-simple@^2.8.2:
+  version "2.8.2"
+  resolved "https://registry.yarnpkg.com/ra-data-graphql-simple/-/ra-data-graphql-simple-2.8.2.tgz#b0fa0605519d221c77c659c03c107908820a3c90"
+  integrity sha512-E161LyRLl1qMBmfWYdU7yuUmto5PL6YK6pxsiygzOoAF16Q1uvT2JCTSy/GpCdgnFqnJ+eKAVKhVJ+WgTsJ+VA==
+  dependencies:
+    graphql-ast-types-browser "~1.0.2"
+    graphql-tag "^2.10.1"
+    lodash "~4.17.5"
+    pluralize "~7.0.0"
+    ra-data-graphql "^2.8.2"
+
+ra-data-graphql@^2.8.2:
+  version "2.8.2"
+  resolved "https://registry.yarnpkg.com/ra-data-graphql/-/ra-data-graphql-2.8.2.tgz#243191f872e4cf56b9767d824ce138f18daea77d"
+  integrity sha512-g+vKR15rHJhLnKDnLZKVFKvFurrhjfnbL3DqI9cCXFh+DZ80+DCawYgJdV13UDjm74oPb5IrmvoJg5zxBvUxfQ==
+  dependencies:
+    apollo-client "^2.5.1"
+    apollo-client-preset "^1.0.8"
+    graphql-tag "^2.10.1"
+    lodash "~4.17.5"
+    pluralize "~7.0.0"
+
 ra-language-english@^2.7.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/ra-language-english/-/ra-language-english-2.7.0.tgz#84de3d67db84cccb1745257551e2f9a9a9470f13"
   integrity sha512-Q57ZfuXqDbESu1Iln7P61Q4mEemFWElCqxmclfJHpLNOr+Dx1gqlrHiGgzmJazGeCrCS1X6shoKI601T5Wt7sw==
 
-ra-ui-materialui@^2.8.2:
-  version "2.8.2"
-  resolved "https://registry.yarnpkg.com/ra-ui-materialui/-/ra-ui-materialui-2.8.2.tgz#913bec218190f717eb3256c6f549d8cca437960d"
-  integrity sha512-UNf7O1E0TwBVj+Koeq7XZOgnhGxDNSYLnGHKDcYcZCrR82Pf41dF1iY6eM33qFv9eG8DhC1BLX7PfaFF7Fc3Xg==
+ra-ui-materialui@^2.8.3:
+  version "2.8.3"
+  resolved "https://registry.yarnpkg.com/ra-ui-materialui/-/ra-ui-materialui-2.8.3.tgz#5c87ca371c6cd3684b9190d927e42aa6b6f785d3"
+  integrity sha512-WQ/NeVXWxNNOK1130zT0J+b9oujkkKT9ba39kmfeKYVHjDUf6jsk2DUkZlqbYvvtvwfVRRi7qoP66fm77V40fg==
   dependencies:
     "@material-ui/core" "^1.4.0"
     "@material-ui/icons" "^1.0.0"
@@ -9356,7 +9388,7 @@ ra-ui-materialui@^2.8.2:
     material-ui-chip-input "1.0.0-beta.6 - 1.0.0-beta.8"
     papaparse "^4.1.4"
     prop-types "~15.6.1"
-    ra-core "^2.8.0"
+    ra-core "^2.8.3"
     react-autosuggest "^9.4.2"
     react-dropzone "~4.0.1"
     react-headroom "^2.2.4"
@@ -9442,14 +9474,14 @@ react-addons-test-utils@^15.6.2:
   resolved "https://registry.yarnpkg.com/react-addons-test-utils/-/react-addons-test-utils-15.6.2.tgz#c12b6efdc2247c10da7b8770d185080a7b047156"
   integrity sha1-wStu/cIkfBDae4dw0YUICnsEcVY=
 
-react-admin@^2.8.2:
-  version "2.8.2"
-  resolved "https://registry.yarnpkg.com/react-admin/-/react-admin-2.8.2.tgz#76491eb15a8b65775c28582dc83f778f515e6e52"
-  integrity sha512-dXwDo3EhY2ak/1ZJy47lfssGgBI83f7v1RPGUpD/J2E7mEfxAvCpWS4iHuAEk5JX8MUmTJiUKqgnCCNFP0JFoA==
+react-admin@^2.8.3:
+  version "2.8.3"
+  resolved "https://registry.yarnpkg.com/react-admin/-/react-admin-2.8.3.tgz#6d91076dc93d64d9f8d5aaa4652d0f065d1d85a3"
+  integrity sha512-wGeiobk2yglY+lHYx+ClJIAMrHaA1jAs5Shh3u7c2IyyWgntJkq9Cp9Cgsmv0vMXWt+XXMFKDu06Q2XvwTKciQ==
   dependencies:
-    ra-core "^2.8.0"
+    ra-core "^2.8.3"
     ra-language-english "^2.7.0"
-    ra-ui-materialui "^2.8.2"
+    ra-ui-materialui "^2.8.3"
 
 react-apollo@^2.4.1:
   version "2.5.2"
