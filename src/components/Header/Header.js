@@ -44,9 +44,6 @@ const Header = props => {
       </Link>
       {login ? (
         <span>
-          <Link href="/admin">
-            <a style={linkStyle}>Admin</a>
-          </Link>
           <Link href="/profile">
             <a style={linkStyle}>Profile</a>
           </Link>

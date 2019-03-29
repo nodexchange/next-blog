@@ -54,7 +54,7 @@ class NextBlog extends App {
             >
               {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
                 <CssBaseline />
-                <Component { ...pageProps } />
+                <Component { ...pageProps } apolloClient={apolloClient} store={store} />
               </MuiThemeProvider>
             </JssProvider>
           </Provider>
